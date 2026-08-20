@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Time to Surface</title>
+<meta name="description" content="Help and contact for Time to Surface, the technical dive planner.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Support</h1>
+  <p>Time to Surface — technical dive planner</p>
+</header>
+
+<p>Something wrong, or a number you disagree with? Write to
+<a href="mailto:timetosurface@ismailov.net">timetosurface@ismailov.net</a>. If it is about
+a specific plan, include the depth, bottom time, gases, cylinders and consumption figure you
+used — that is enough to reproduce any number the app shows.</p>
+
+<h2>Common questions</h2>
+
+<h3>My runtime is longer than my computer's, and my first stop is deeper.</h3>
+
+<p>Two deliberate differences, and both are in Settings.</p>
+
+<p>The app ascends the <strong>last six metres at 1 m/min</strong>, which most planners do
+not — they leave that leg at 9 or 10 m/min. On a 45 m dive that is about five minutes of
+runtime on its own. It is the most productive off-gassing of the whole dive and it comes
+from the training materials the app implements.</p>
+
+<p>The default <strong>gradient factors are 20/85</strong>. A GF low of 20 puts the first
+stop deeper than a computer running 30/85 or 40/85. Set them to whatever yours runs and the
+schedules converge.</p>
+
+<h3>What does "bottom time" mean here?</h3>
+
+<p>Minutes from <strong>leaving the surface</strong> to leaving the bottom — the descent is
+inside it. A 45 m dive with a 25-minute bottom time is about five minutes down and twenty at
+depth. This is what DecoPlanner means by it too, and it is why the same "25 min" can be two
+different dives in two planners.</p>
+
+<h3>Why only one decompression gas?</h3>
+
+<p>It is a stated limit of this release, not an oversight. The app plans one deco bottle —
+EAN50 or oxygen. If your plan calls for two, this is not your planner yet.</p>
+
+<h3>Can it plan a second dive on the same day?</h3>
+
+<p>Not yet. Every plan is treated as a first dive on a clean tissue load. Repetitive diving
+is not implemented, and the app does not pretend otherwise.</p>
+
+<h3>Why does it refuse instead of warning me?</h3>
+
+<p>Because a number with a caution attached is still a number, and people use it. Past 51 m,
+past a gas's oxygen limit, past the maximum oxygen exposure, or where your cylinders will not
+cover the plan, the app produces nothing at all and says why.</p>
+
+<h3>Why is minimum gas so much bigger than I expected?</h3>
+
+<p>It is the workbook rule, not a walk of the planned ascent: two divers on one supply, at
+the <em>minimum</em> ascent rate rather than the planned one, from the deepest point to the
+first decompression gas, with the stops included. A sharing team does not ascend at planned
+speed, and the figure is much larger than a straight-line estimate suggests.</p>
+
+<h3>What is a "wetnote" and why would I use it?</h3>
+
+<p>The plan laid out as a page to copy onto your wetnotes by hand — the stop schedule with
+the runtime you leave each level at, the pressures to check your gauge against, and the
+contingencies. It is the schedule you fly when the computer floods.</p>
+
+<h3>Does it work without a signal?</h3>
+
+<p>Always. The app has no network access at all, so a boat with no reception changes
+nothing.</p>
+
+<h3>Will it tell me a dive is safe?</h3>
+
+<p>No, and it never will. It does pre-dive arithmetic. Your training comes first, and in the
+water your dive computer owns the dive.</p>
+
+<footer>
+  <p>&copy; 2026 Rustam Ismailov</p>
+  <p><a href="index.html">Time to Surface</a> &middot; <a href="privacy.html">Privacy</a></p>
+</footer>
+
+</main>
+</body>
+</html>
