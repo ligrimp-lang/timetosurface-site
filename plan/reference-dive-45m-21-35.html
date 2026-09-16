@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>45 m / 25 min on 21/35 with EAN50 — runtime and stops — Time to Surface</title>
+<meta name="description" content="The full schedule for the reference technical dive: 45 m for 25 minutes on 21/35, EAN50 deco gas, twin steel 12s. First stop, every level, runtime and CNS as Time to Surface computes them.">
+<link rel="canonical" href="https://ligrimp-lang.github.io/timetosurface-site/plan/reference-dive-45m-21-35.html">
+<meta name="apple-itunes-app" content="app-id=6803187271">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+
+<header>
+  <h1>45 m / 25 min on 21/35 with EAN50</h1>
+  <p>Time to Surface — technical dive planner &amp; decompression calculator</p>
+</header>
+
+<p>This is the app's own reference dive — the one its documentation and test suite are
+built around. A sensible mid-depth technical dive: 45 m for 25 minutes on 21/35, one
+deco bottle of EAN50, twin steel 12s.</p>
+
+<h2>The schedule</h2>
+
+<ul>
+  <li><strong>Descent: 4.5 minutes</strong> to 45 m.</li>
+  <li><strong>Time at maximum depth: 20.5 minutes</strong> (25 minutes bottom time minus
+  the descent).</li>
+  <li><strong>First stop: 24 m</strong>, runtime 27.3 minutes.</li>
+  <li><strong>Stops:</strong> 24 m &times; 1 min, 21 m &times; 2 min (gas switch to
+  EAN50), 18 m &times; 1 min, 15 m &times; 1 min, 12 m &times; 1 min, 9 m &times; 2 min,
+  6 m &times; 10 min.</li>
+  <li><strong>Total stop time: 18 minutes.</strong> Final ascent from 6 m: 6
+  minutes.</li>
+  <li><strong>Total runtime: 51.3 minutes</strong>, from leaving the surface to
+  surfacing.</li>
+  <li><strong>CNS: 24%.</strong></li>
+</ul>
+
+<h2>Inputs used</h2>
+
+<ul>
+  <li>Depth: 45 m, bottom time: 25 minutes (4.5 min descent + 20.5 min at depth)</li>
+  <li>Bottom gas: 21/35 (trimix)</li>
+  <li>Deco gas: EAN50, switch at 21 m</li>
+  <li>Back gas: twin steel 12 L (24 L water volume, 232 bar)</li>
+  <li>Gradient factors: 20/85 (the app's default)</li>
+  <li>ppO<sub>2</sub>: 1.2 bar working, 1.6 bar at a stop (the app's default)</li>
+  <li>Descent 10 m/min, 9 m/min to the first stop, 3 m/min between stops, last 6 m at
+  1 m/min</li>
+</ul>
+
+<p>Levels are arrival-to-arrival: the 24 m line's one minute is the swim up to it, not a
+hold there — a level printing more than one minute is genuinely held.</p>
+
+<p class="dim">Source: Time to Surface's pinned etalon suite, profile 07 ("The baseline")
+in <code>EtalonDerivedAnswers.swift</code>, one of the dives listed in
+<code>docs/etalon-technical-profiles.md</code> and checked field by field against the
+app's own solver on every build.</p>
+
+<p>Your training, your gauge and your computer decide the dive. This is pre-dive
+arithmetic, not a dive computer, and it does not make any dive safe.</p>
+
+<footer>
+  <p>&copy; 2026 Rustam Ismailov</p>
+  <p><a href="../index.html">Time to Surface</a> &middot; <a href="../privacy.html">Privacy</a>
+  &middot; <a href="../support.html">Support</a></p>
+</footer>
+
+</main>
+</body>
+</html>

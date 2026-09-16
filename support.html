@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Support — Time to Surface</title>
-<meta name="description" content="Help and contact for Time to Surface, the technical dive planner.">
+<meta name="description" content="Help and contact for Time to Surface, the technical dive planner and decompression calculator.">
+<link rel="canonical" href="https://ligrimp-lang.github.io/timetosurface-site/support.html">
+<meta name="apple-itunes-app" content="app-id=6803187271">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Support — Time to Surface">
+<meta property="og:description" content="Help and contact for Time to Surface, the technical dive planner and decompression calculator.">
+<meta property="og:url" content="https://ligrimp-lang.github.io/timetosurface-site/support.html">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -55,14 +61,21 @@ EAN50 or oxygen. If your plan calls for two, this is not your planner yet.</p>
 
 <h3>Can it plan a second dive on the same day?</h3>
 
-<p>Not yet. Every plan is treated as a first dive on a clean tissue load. Repetitive diving
-is not implemented, and the app does not pretend otherwise.</p>
+<p>Yes, up to three dives before the one you are planning, each with the surface interval
+before it. Nitrogen and helium both carry across the interval, and CNS decays at a
+90-minute half-time. No published table covers repetitive decompression diving — this runs
+your own previous profiles through the same model rather than guessing. A surface interval
+under an hour is refused: a dissolved-gas model has no term for bubbles formed on the first
+ascent and recompressed on the second, so below some interval the answer is structurally
+wrong rather than imprecise.</p>
 
 <h3>Why does it refuse instead of warning me?</h3>
 
-<p>Because a number with a caution attached is still a number, and people use it. Past 51 m,
-past a gas's oxygen limit, past the maximum oxygen exposure, or where your cylinders will not
-cover the plan, the app produces nothing at all and says why.</p>
+<p>Because a number with a caution attached is still a number, and people use it. A gas past
+its oxygen limit, an exposure past the maximum, cylinders that will not cover the plan, or a
+surface interval under an hour — the app produces nothing at all and says why. Past 51 m it
+is the one exception: it plans and warns, because the binding limit there is gas density
+rather than oxygen, and the reason is stated on screen.</p>
 
 <h3>Why is minimum gas so much bigger than I expected?</h3>
 

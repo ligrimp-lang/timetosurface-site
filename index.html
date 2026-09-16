@@ -3,56 +3,124 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Time to Surface — technical dive planner</title>
-<meta name="description" content="Staged decompression to 51 m. Runtime, stops, minimum gas and both cylinder fills, before you kit up. Free, offline, iPhone.">
+<title>Time to Surface — technical dive planner &amp; decompression calculator</title>
+<meta name="description" content="Staged decompression, 15 to 51 m (56 with a warning). Trimix, runtime, stops, minimum gas and both cylinder fills, gradient factors, before you kit up. Free deco planner for iPhone, offline.">
+<link rel="canonical" href="https://ligrimp-lang.github.io/timetosurface-site/">
+<meta name="apple-itunes-app" content="app-id=6803187271">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Time to Surface — technical dive planner &amp; decompression calculator">
+<meta property="og:description" content="Staged decompression, 15 to 51 m (56 with a warning). Trimix, runtime, stops, minimum gas and both cylinder fills. Free, offline, iPhone.">
+<meta property="og:url" content="https://ligrimp-lang.github.io/timetosurface-site/">
+<meta property="og:site_name" content="Time to Surface">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Time to Surface — technical dive planner &amp; decompression calculator">
+<meta name="twitter:description" content="Staged decompression, 15 to 51 m (56 with a warning). Trimix, runtime, stops, minimum gas and both cylinder fills. Free, offline, iPhone.">
+
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Time to Surface",
+  "operatingSystem": "iOS",
+  "applicationCategory": "SportsApplication",
+  "url": "https://ligrimp-lang.github.io/timetosurface-site/",
+  "description": "Staged decompression planning for technical divers — runtime, stops, minimum gas and both cylinder fills, on six bottom gases and one deco gas.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Rustam Ismailov"
+  }
+}
+</script>
 </head>
 <body>
 <main>
 
 <header>
   <h1>Time to Surface</h1>
-  <p>Technical dive planner for iPhone</p>
+  <p>Technical dive planner &amp; decompression calculator for iPhone</p>
 </header>
 
-<p>Staged decompression to 51 m on air, 21/35 or 18/45, with one deco gas — EAN50 or oxygen.
-Runtime, stops, minimum gas and both cylinder fills, before you kit up.</p>
+<p class="cta">
+  <a href="https://apps.apple.com/app/id6803187271">Download on the App Store</a>
+</p>
+<p class="cta-note">Free. No in-app purchases, no subscription, no account.</p>
 
-<p>Free. No in-app purchases, no subscription, no account.</p>
+<p>Staged decompression from 15 to 51 metres — deeper to 56 with a warning — on six bottom
+gases, with one deco bottle. Runtime, stops, minimum gas and both cylinder fills, before
+you kit up.</p>
 
 <h2>What it plans</h2>
 
 <ul>
-  <li>Bühlmann ZH-L16C, gradient factors yours to set, 20/85 by default</li>
-  <li>ppO<sub>2</sub> 1.2 bar working and 1.6 bar at a stop by default, both adjustable</li>
-  <li>Descent 10 m/min, 9 m/min to the first stop, 3 m/min between stops, and the last 6 m
-  at 1 m/min — all four adjustable</li>
-  <li>Back gas fill and turn pressure on thirds, halves or all usable</li>
-  <li>Minimum gas: two divers on one supply, at the minimum ascent rate, stops included</li>
-  <li>Deco bottle fill and reserve, walked level by level rather than estimated</li>
-  <li>Metric or imperial</li>
+  <li><strong>Staged decompression, 15 m to 51 m.</strong> Past 51 m it plans and warns
+  rather than refuses — gas density binds before oxygen does there.</li>
+  <li><strong>Six bottom gases</strong> — EAN32, triox 30/30, EAN28, air, 21/35 and
+  18/45.</li>
+  <li><strong>One decompression gas</strong> — EAN50 or oxygen — in an AL80, AL50 or AL40,
+  on a twinset back gas you pick.</li>
+  <li><strong>Bühlmann ZH-L16C</strong>, gradient factors yours to set, 20/85 by
+  default.</li>
+  <li><strong>ppO<sub>2</sub> 1.2 bar working, 1.6 bar at a stop</strong> by default —
+  stricter than the 1.4 most divers trained at. Both adjustable.</li>
+  <li><strong>Descent and ascent rates you set</strong> — 10 m/min down, 9 m/min to the
+  first stop, 3 m/min between stops, and the last 6 m at 1 m/min.</li>
+  <li><strong>Minimum gas</strong>, the workbook's <code>C × A × T</code>: what two divers
+  on one back-gas supply need to leave the deepest point and reach the surface, at the
+  minimum ascent rate rather than the planned one.</li>
+  <li><strong>Deco bottle fill and reserve</strong>, walked level by level from the
+  schedule that was actually solved, not estimated.</li>
+  <li><strong>CNS</strong>, and which of back gas, deco bottle or CNS ends the dive.</li>
+  <li><strong>Repetitive dives</strong> — keep a plan under a name, then say up to three
+  came before this one, each with its surface interval. Nitrogen and helium both cross the
+  interval; CNS decays at a 90-minute half-time.</li>
+  <li><strong>Contingencies, re-solved</strong> — lose the deco bottle, add five minutes,
+  or go three metres deeper, each run through the same model rather than scaled by a rule
+  of thumb.</li>
+  <li><strong>Pragmatic decompression</strong>, off by default — a simplified profile for
+  the water, not a more conservative one.</li>
+  <li><strong>A wetnote page</strong>, one tap, sized to copy onto your slate by hand.</li>
+  <li>Metric or imperial.</li>
 </ul>
 
 <h2>What it does not plan</h2>
 
-<p>Closed-circuit rebreathers. Cave or wreck penetration. Hypoxic mixes and travel gas. More
-than one decompression gas. Repetitive dives. Altitude — sea level only. It does not compute
-OTU or air breaks.</p>
+<p>Closed-circuit rebreathers. Cave or wreck penetration. Hypoxic mixes and travel gas.
+More than one decompression gas. Altitude — sea level only. It does not compute OTU.</p>
 
 <h2>It refuses rather than warns</h2>
 
-<p>Deeper than 51 m, a gas past its oxygen limit, an exposure past the maximum, cylinders
-that will not cover the plan — all produce no numbers at all, rather than a number with a
-caution attached.</p>
+<p>Inside its envelope: a gas past its oxygen limit, an exposure past the maximum,
+cylinders that will not cover the plan, a surface interval under an hour — all produce no
+numbers at all, rather than a number with a caution attached.</p>
 
 <h2>Your dive computer owns the dive</h2>
 
 <p>This is pre-dive arithmetic. It never pronounces a dive safe, and it is not a substitute
 for training, for your computer, or for your own judgement in the water.</p>
 
+<h2>Worked examples</h2>
+
+<p>Real figures from the app's own reference dive and pinned test cases:</p>
+
+<ul>
+  <li><a href="plan/reference-dive-45m-21-35.html">Runtime and stops for 45 m / 25 min on 21/35 with EAN50</a></li>
+  <li><a href="plan/air-only-40m.html">40 m for 30 minutes on air, no deco gas — does a twin 12 cover it?</a></li>
+  <li><a href="plan/minimum-gas-cat.html">Minimum gas, C &times; A &times; T, for the reference dive</a></li>
+  <li><a href="plan/deco-bottle-al80.html">What the EAN50 deco bottle needs for the reference dive</a></li>
+  <li><a href="plan/descent-vs-time-at-max-depth.html">How descent and time at max depth are counted</a></li>
+</ul>
+
 <footer>
   <p>&copy; 2026 Rustam Ismailov</p>
   <p><a href="privacy.html">Privacy</a> &middot; <a href="support.html">Support</a>
+  &middot; <a href="https://apps.apple.com/app/id6803187271">App Store</a>
   &middot; <a href="mailto:timetosurface@ismailov.net">timetosurface@ismailov.net</a></p>
 </footer>
 

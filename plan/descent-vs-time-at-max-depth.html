@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descent vs. time at max depth — how bottom time is counted — Time to Surface</title>
+<meta name="description" content="How Time to Surface splits a technical dive's bottom time into descent and time at maximum depth, worked for the 45 m / 25 min reference dive, and why it differs from DecoPlanner's convention.">
+<link rel="canonical" href="https://ligrimp-lang.github.io/timetosurface-site/plan/descent-vs-time-at-max-depth.html">
+<meta name="apple-itunes-app" content="app-id=6803187271">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Descent vs. time at max depth</h1>
+  <p>Time to Surface — technical dive planner &amp; decompression calculator</p>
+</header>
+
+<p>Time to Surface names the two legs of getting to the bottom in plain language: descent
+is the swim down, and time at max depth is what you do once you are there. Type one
+number — how long you plan to be down for in total — and the app splits it.</p>
+
+<h2>Worked for the reference dive</h2>
+
+<p>45 m for 25 minutes on 21/35:</p>
+
+<ul>
+  <li><strong>Descent: 4.5 minutes</strong>, at 10 m/min to 45 m — a Schreiner ramp for the
+  tissue model, not a flat average depth.</li>
+  <li><strong>Time at max depth: 20.5 minutes.</strong></li>
+  <li><strong>25 minutes, total</strong> — what you typed.</li>
+</ul>
+
+<h2>Why this differs from a DecoPlanner run of the same number</h2>
+
+<p>DecoPlanner and GUE's own course material both count bottom time from leaving the
+surface, descent included — the same convention Time to Surface used until 2026-08-24.
+The app now separates the two legs because "bottom time" is a term two planners can mean
+differently, and naming both legs removes the argument over which one owns the word.
+Comparing this app's numbers against DecoPlanner needs <strong>descent + time at max
+depth</strong> against DecoPlanner's bottom time, not the typed figure against it — the
+same 25 minutes plans a dive about 4.5 minutes shorter at depth here than in a planner
+that counts the descent inside it.</p>
+
+<p>The <strong>runtime clock is unaffected</strong> by this split: total runtime and every
+stop's runtime are still counted from the surface, which is what keeps runtimes
+comparable between planners.</p>
+
+<h2>Inputs used</h2>
+
+<ul>
+  <li>Depth: 45 m, bottom time as typed: 25 minutes</li>
+  <li>Descent rate: 10 m/min (the app's default, adjustable)</li>
+</ul>
+
+<p class="dim">Source: Time to Surface's pinned etalon suite, profile 07 ("The baseline")
+in <code>EtalonDerivedAnswers.swift</code>; the descent/bottom-time convention is recorded
+in <code>docs/etalon-technical-profiles.md</code>.</p>
+
+<p>Your training, your gauge and your computer decide the dive. This is pre-dive
+arithmetic, not a dive computer, and it does not make any dive safe.</p>
+
+<footer>
+  <p>&copy; 2026 Rustam Ismailov</p>
+  <p><a href="../index.html">Time to Surface</a> &middot; <a href="../privacy.html">Privacy</a>
+  &middot; <a href="../support.html">Support</a></p>
+</footer>
+
+</main>
+</body>
+</html>

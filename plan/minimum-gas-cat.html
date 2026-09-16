@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minimum gas, C &times; A &times; T, for 45 m / 25 min on 21/35 — Time to Surface</title>
+<meta name="description" content="The workbook's minimum-gas formula, C x A x T, worked for the reference technical dive: 45 m for 25 minutes on 21/35 with EAN50, twin steel 12s.">
+<link rel="canonical" href="https://ligrimp-lang.github.io/timetosurface-site/plan/minimum-gas-cat.html">
+<meta name="apple-itunes-app" content="app-id=6803187271">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Minimum gas: C &times; A &times; T</h1>
+  <p>Time to Surface — technical dive planner &amp; decompression calculator</p>
+</header>
+
+<p>Minimum gas is the volume two divers on one back-gas supply need to leave the deepest
+point and reach the first decompression gas, at the <em>minimum</em> ascent rate rather
+than the planned one — a sharing team does not move at planned speed. The formula is the
+workbook's own: <strong>C &times; A &times; T</strong>.</p>
+
+<h2>Worked for the reference dive</h2>
+
+<p>45 m for 25 minutes on 21/35, EAN50 deco gas, twin steel 12s:</p>
+
+<ul>
+  <li><strong>C — team consumption: 40 L/min</strong> (two divers sharing one supply,
+  20 L/min each).</li>
+  <li><strong>A — mean absolute pressure over the ascent to the gas switch: 4.3
+  bar.</strong></li>
+  <li><strong>T — minutes from 45 m to the switch at 21 m, stops included: 10
+  minutes.</strong></li>
+  <li><strong>C &times; A &times; T = 40 &times; 4.3 &times; 10 = 1,720 litres.</strong></li>
+  <li><strong>In the twin steel 12s, that is 80 bar.</strong></li>
+</ul>
+
+<p>Add what the dive itself costs to breathe (118 bar on this profile) and the required
+fill for the back gas comes to 200 bar, inside the twinset's 232 bar rating.</p>
+
+<h2>Inputs used</h2>
+
+<ul>
+  <li>Depth: 45 m, bottom time: 25 minutes</li>
+  <li>Bottom gas: 21/35, deco gas: EAN50 switching at 21 m</li>
+  <li>Back gas: twin steel 12 L (24 L water volume, 232 bar)</li>
+  <li>SAC: 20 L/min per diver</li>
+  <li>Gradient factors: 20/85 (the app's default)</li>
+</ul>
+
+<p>The endpoint is the gas switch, not the surface — this dive carries a deco bottle to
+change onto. A dive with no deco gas at all charges the reserve all the way to the
+surface instead, at a much larger cost.</p>
+
+<p class="dim">Source: Time to Surface's pinned etalon suite, profile 07 ("The baseline")
+in <code>EtalonDerivedAnswers.swift</code>, the workbook's <code>MG = C &times; A &times;
+T</code> rule reproduced against its own printed table before any etalon value was
+written.</p>
+
+<p>Your training, your gauge and your computer decide the dive. This is pre-dive
+arithmetic, not a dive computer, and it does not make any dive safe.</p>
+
+<footer>
+  <p>&copy; 2026 Rustam Ismailov</p>
+  <p><a href="../index.html">Time to Surface</a> &middot; <a href="../privacy.html">Privacy</a>
+  &middot; <a href="../support.html">Support</a></p>
+</footer>
+
+</main>
+</body>
+</html>
